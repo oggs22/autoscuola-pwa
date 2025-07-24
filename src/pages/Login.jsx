@@ -1,4 +1,7 @@
 export default function Login() {
+  const goToDashboard = () => {
+    window.location.href = "/dashboard";
+  };
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="bg-white p-8 rounded-3xl shadow-xl w-full max-w-sm text-center">
@@ -17,9 +20,10 @@ export default function Login() {
           className="w-full p-3 mb-6 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button
+          onClick={goToDashboard}
           className="w-full p-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-md transition duration-300 ease-in-out transform hover:scale-105"
         >
-          <a href="/dashboard">ACCEDI</a>
+          ACCEDI
         </button>
         <p className="mt-4 text-sm text-gray-600">
           Non hai un account? <a href="#" className="text-blue-600 font-semibold hover:underline">Crea Nuovo</a>
